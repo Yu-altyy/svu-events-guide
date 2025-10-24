@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الفعاليات - Kaspar</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-row">
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a class="active" href="events.html">الفعاليات</a></li>
+                    <li><a href="about.html">عن الدليل</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </nav>
+
+            <a class="logo" href="index.html">
+                <img src="assets/img/logo.png" alt="logo" />
+                <span class="site-title">Kaspar</span>
+            </a>
+
+            <div class="control-buttons">
+                <button class="control-btn dark-mode-btn" id="darkModeBtn" title="الوضع المظلم">
+                    <img src="assets/img/day-and-night.png" alt="الوضع المظلم" style="width: 20px; height: 20px;" />
+                </button>
+                
+                <div class="language-buttons">
+                    <button class="control-btn language-btn active" id="arabicBtn" title="العربية">
+                        <img src="assets/img/Flag_of_Syria_(2025-).svg" alt="سوريا" />
+                    </button>
+                    <button class="control-btn language-btn" id="englishBtn" title="English">
+                        <img src="assets/img/UK.jpg" alt="English" />
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>الفعاليات</h1>
+            <p class="lead">استكشف جميع الفعاليات القادمة في مدينتك</p>
+        </div>
+    </section>
+
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-container">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="search-box">
+                            <input type="text" class="form-control" id="searchInput" placeholder="ابحث عن فعالية...">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-select" id="categoryFilter">
+                            <option value="">جميع التصنيفات</option>
+                            <option value="culture">ثقافة</option>
+                            <option value="arts">فنون</option>
+                            <option value="music">موسيقى</option>
+                            <option value="sports">رياضة</option>
+                            <option value="family">عائلي</option>
+                            <option value="education">تعليم</option>
+                            <option value="technology">تكنولوجيا</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" class="form-control" id="dateFilter">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-outline-primary w-100" id="resetFilters">إعادة تعيين</button>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <div class="active-filters" id="activeFilters"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid of latest events -->
+    <section class="events container">
+        <div class="section-title">
+            <h2>الفعاليات القادمة</h2>
+            <p class="text-muted" id="eventsCount">عرض جميع الفعاليات</p>
+        </div>
+
+        <div class="grid" id="eventsGrid">
+            <article class="event-card" data-category="culture" data-date="2025-08-27" data-location="دمشق">
+                <img src="assets/img/event1.jpg" alt="معرض دمشق الدولي" />
+                <div class="event-body">
+                    <span class="event-badge culture">ثقافة</span>
+                    <h4>معرض دمشق الدولي</h4>
+                    <p class="meta">27 آب ولغاية 5 أيلول – دمشق – مدينة المعارض</p>
+                    <a href="event.html#event1" class="small-link">تفاصيل الفعالية</a>
+                </div>
+            </article>
+
+            <article class="event-card" data-category="family" data-date="2025-07-07" data-location="دمشق">
+                <img src="assets/img/event2.jpg" alt="مهرجان النادي الصيفي" />
+                <div class="event-body">
+                    <span class="event-badge family">عائلي</span>
+                    <h4>مهرجان النادي الصيفي</h4>
+                    <p class="meta">7 تموز - دمشق</p>
+                    <a href="event.html#event2" class="small-link">تفاصيل الفعالية</a>
+                </div>
+            </article>
+
+            <article class="event-card" data-category="culture" data-date="2025-03-08" data-location="دمشق">
+                <img src="assets/img/event3.jpg" alt="يوم المرأة العالمي" />
+                <div class="event-body">
+                    <span class="event-badge culture">ثقافة</span>
+                    <h4>يوم المرأة العالمي</h4>
+                    <p class="meta">8 آذار - دمشق - جامعة دمشق _ قاعة رضا سعيد</p>
+                    <a href="event.html#event3" class="small-link">تفاصيل الفعالية</a>
+                </div>
+            </article>
+
+            <article class="event-card" data-category="culture" data-date="2025-08-24" data-location="دمشق">
+                <img src="assets/img/event4.webp" alt="مشروع صون التراث اللامادي" />
+                <div class="event-body">
+                    <span class="event-badge culture">ثقافة</span>
+                    <h4>مشروع صون التراث اللامادي</h4>
+                    <p class="meta">24 آب - دمشق - المكتبة الوطنية</p>
+                    <a href="event.html#event4" class="small-link">تفاصيل الفعالية</a>
+                </div>
+            </article>
+
+            <article class="event-card" data-category="culture" data-date="2025-07-27" data-location="دمشق">
+                <img src="assets/img/event5.jpg" alt="ملتقى الكتاب السوريين" />
+                <div class="event-body">
+                    <span class="event-badge culture">ثقافة</span>
+                    <h4>ملتقى الكتاب السوريين</h4>
+                    <p class="meta">27 تموز ولغاية 30 تموز - دمشق - المكتبة الوطنية</p>
+                    <a href="event.html#event5" class="small-link">تفاصيل الفعالية</a>
+                </div>
+            </article>
+
+            <article class="event-card" data-category="music" data-date="2025-07-25" data-location="دمشق">
+                <img src="assets/img/event6.png" alt="الحفل الإنشادي الأكبر" />
+                <div class="event-body">
+                    <span class="event-badge music">موسيقى</span>
+                    <h4>الحفل الإنشادي الأكبر</h4>
+                    <p class="meta">25 تموز - دمشق - قلعة دمشق</p>
+                    <a href="event.html#event6" class="small-link">تفاصيل الفعالية</a>
+                </div>
+            </article>
+
+            <article class="event-card" data-category="arts" data-date="2025-06-15" data-location="دمشق">
+                <img src="assets/img/event7.jpg" alt="حروف في وجه الرصاص" />
+                <div class="event-body">
+                    <span class="event-badge arts">فنون</span>
+                    <h4>حروف في وجه الرصاص</h4>
+                    <p class="meta">15 حزيران ولغاية 30 حزيران - دمشق - صالة المكتبة الوطنية</p>
+                    <a href="event.html#event7" class="small-link">تفاصيل الفعالية</a>
+                </div>
+            </article>
+
+            <article class="event-card" data-category="culture" data-date="2025-10-15" data-location="دمشق">
+                <img src="assets/img/event8.webp" alt="معرض الكتاب" />
+                <div class="event-body">
+                    <span class="event-badge culture">ثقافة</span>
+                    <h4>معرض الكتاب</h4>
+                    <p class="meta">15 تشرين الأول - دمشق - المكتبة الوطنية</p>
+                    <a href="event.html#event8" class="small-link">تفاصيل الفعالية</a>
+                </div>
+            </article>
+
+            <article class="event-card" data-category="family" data-date="2025-09-27" data-location="دمشق">
+                <img src="assets/img/event9.jpg" alt="معرض الزهور" />
+                <div class="event-body">
+                    <span class="event-badge family">عائلي</span>
+                    <h4>معرض الزهور</h4>
+                    <p class="meta">27 أيلول - دمشق - ساحة الأمويين</p>
+                    <a href="event.html#event9" class="small-link">تفاصيل الفعالية</a>
+                </div>
+            </article>
+
+            <article class="event-card" data-category="technology" data-date="2025-11-24" data-location="دمشق">
+                <img src="assets/img/event10.jpg" alt="معرض ستيكس (SITEX) لتكنولوجيا المعلومات" />
+                <div class="event-body">
+                    <span class="event-badge technology">تكنولوجيا</span>
+                    <h4>معرض ستيكس (SITEX) لتكنولوجيا المعلومات</h4>
+                    <p class="meta">24 تشرين الثاني - دمشق - مدينة المعارض</p>
+                    <a href="event.html#event10" class="small-link">تفاصيل الفعالية</a>
+                </div>
+            </article>
+
+            <article class="event-card" data-category="music" data-date="2025-09-07" data-location="درعا">
+                <img src="assets/img/event11.webp" alt="مهرجان بصرى الدولي" />
+                <div class="event-body">
+                    <span class="event-badge music">موسيقى</span>
+                    <h4>مهرجان بصرى الدولي</h4>
+                    <p class="meta">7 أيلول - درعا - مدرج بصرى الأثري</p>
+                    <a href="event.html#event11" class="small-link">تفاصيل الفعالية</a>
+                </div>
+            </article>
+
+            <article class="event-card" data-category="culture" data-date="2025-12-08" data-location="مختلف">
+                <img src="assets/img/event12.png" alt="فعاليات اليوم الوطني" />
+                <div class="event-body">
+                    <span class="event-badge culture">ثقافة</span>
+                    <h4>فعاليات اليوم الوطني</h4>
+                    <p class="meta">8 كانون الأول - الساحة الرئيسية في كل محافظة</p>
+                    <a href="event.html#event12" class="small-link">تفاصيل الفعالية</a>
+                </div>
+            </article>
+
+            <article class="event-card" data-category="education" data-date="2025-09-07" data-location="دمشق">
+                <img src="assets/img/event13.jpg" alt="ندوة:الدولة السورية تحديات وفرص" />
+                <div class="event-body">
+                    <span class="event-badge education">تعليم</span>
+                    <h4>ندوة:الدولة السورية تحديات وفرص</h4>
+                    <p class="meta">7 أيلول - دمشق مدرج المكتبة الوطنية</p>
+                    <a href="event.html#event13" class="small-link">تفاصيل الفعالية</a>
+                </div>
+            </article>
+
+            <article class="event-card" data-category="arts" data-date="2025-05-24" data-location="دمشق">
+                <img src="assets/img/event14.jpg" alt="أمسية شعرية: نصر يليق بنا" />
+                <div class="event-body">
+                    <span class="event-badge arts">فنون</span>
+                    <h4>أمسية شعرية: نصر يليق بنا</h4>
+                    <p class="meta">24 أيار - دمشق - دار الأوبرا</p>
+                    <a href="event.html#event14" class="small-link">تفاصيل الفعالية</a>
+                </div>
+            </article>
+
+            <article class="event-card" data-category="music" data-date="2025-08-02" data-location="اللاذقية">
+                <img src="assets/img/event15.webp" alt="مهرجان المحبة" />
+                <div class="event-body">
+                    <span class="event-badge music">موسيقى</span>
+                    <h4>مهرجان المحبة</h4>
+                    <p class="meta">2 آب - اللاذقية</p>
+                    <a href="event.html#event15" class="small-link">تفاصيل الفعالية</a>
+                </div>
+            </article>
+
+            <article class="event-card" data-category="family" data-date="2025-03-01" data-location="حمص">
+                <img src="assets/img/event16.jpeg" alt="مهرجان السياحة والتسوق" />
+                <div class="event-body">
+                    <span class="event-badge family">عائلي</span>
+                    <h4>مهرجان السياحة والتسوق</h4>
+                    <p class="meta">1 رمضان - حمص</p>
+                    <a href="event.html#event16" class="small-link">تفاصيل الفعالية</a>
+                </div>
+            </article>
+
+            <article class="event-card" data-category="technology" data-date="2025-10-16" data-location="دمشق">
+                <img src="assets/img/event17.jpg" alt="Syria Motor Show 2025" />
+                <div class="event-body">
+                    <span class="event-badge technology">تكنولوجيا</span>
+                    <h4>Syria Motor Show 2025</h4>
+                    <p class="meta">16 تشرين الأول ولغاية 20 تشرين الأول - دمشق - مدينة المعارض</p>
+                    <a href="event.html#event17" class="small-link">تفاصيل الفعالية</a>
+                </div>
+            </article>
+
+            <article class="event-card" data-category="arts" data-date="2025-04-07" data-location="دمشق">
+                <img src="assets/img/event18.jpg" alt="مهرجان الفيحاء للمسرح المدرسي" />
+                <div class="event-body">
+                    <span class="event-badge arts">فنون</span>
+                    <h4>مهرجان الفيحاء للمسرح المدرسي</h4>
+                    <p class="meta">7 نيسان - دمشق - قاعة المسرح القومي الرئيسي</p>
+                    <a href="event.html#event18" class="small-link">تفاصيل الفعالية</a>
+                </div>
+            </article>
+
+            <article class="event-card" data-category="sports" data-date="2025-09-26" data-location="دمشق">
+                <img src="assets/img/event19.jpg" alt="Damascus Marathon" />
+                <div class="event-body">
+                    <span class="event-badge sports">رياضة</span>
+                    <h4>Damascus Marathon</h4>
+                    <p class="meta">26 أيلول - دمشق - مدينة المعارض القديمة</p>
+                    <a href="event.html#event19" class="small-link">تفاصيل الفعالية</a>
+                </div>
+            </article>
+
+            <article class="event-card" data-category="culture" data-date="2025-04-01" data-location="تدمر">
+                <img src="assets/img/event20.jpg" alt="مهرجان طريق الحرير" />
+                <div class="event-body">
+                    <span class="event-badge culture">ثقافة</span>
+                    <h4>مهرجان طريق الحرير</h4>
+                    <p class="meta">1 نيسان - تدمر</p>
+                    <a href="event.html#event20" class="small-link">تفاصيل الفعالية</a>
+                </div>
+            </article>
+        </div>
+
+        <div id="noResults" class="no-results" style="display: none;">
+            <div class="text-center py-5">
+                <h4>لا توجد فعاليات تطابق معايير البحث</h4>
+                <p class="text-muted">جرب استخدام كلمات بحث مختلفة أو إعادة تعيين الفلاتر</p>
+                <button class="btn btn-primary mt-3" id="resetFiltersBtn">إعادة تعيين الفلاتر</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // عناصر البحث والفلترة
+            const searchInput = document.getElementById('searchInput');
+            const categoryFilter = document.getElementById('categoryFilter');
+            const dateFilter = document.getElementById('dateFilter');
+            const resetFilters = document.getElementById('resetFilters');
+            const resetFiltersBtn = document.getElementById('resetFiltersBtn');
+            const eventsGrid = document.getElementById('eventsGrid');
+            const eventsCount = document.getElementById('eventsCount');
+            const noResults = document.getElementById('noResults');
+            const activeFilters = document.getElementById('activeFilters');
+            
+            const eventCards = Array.from(eventsGrid.querySelectorAll('.event-card'));
+            
+            function updateEventsCount(visibleCount) {
+                const totalCount = eventCards.length;
+                if (visibleCount === totalCount) {
+                    eventsCount.textContent = `عرض جميع الفعاليات (${totalCount})`;
+                } else {
+                    eventsCount.textContent = `عرض ${visibleCount} من أصل ${totalCount} فعالية`;
+                }
+            }
+            
+            function updateActiveFilters() {
+                const filters = [];
+                
+                if (searchInput.value) {
+                    filters.push(`بحث: "${searchInput.value}"`);
+                }
+                
+                if (categoryFilter.value) {
+                    const categoryText = categoryFilter.options[categoryFilter.selectedIndex].text;
+                    filters.push(`تصنيف: ${categoryText}`);
+                }
+                
+                if (dateFilter.value) {
+                    filters.push(`تاريخ: ${formatDate(dateFilter.value)}`);
+                }
+                
+                if (filters.length > 0) {
+                    activeFilters.innerHTML = `
+                        <strong>الفلاتر النشطة:</strong>
+                        ${filters.map(filter => `<span class="active-filter">${filter}</span>`).join('')}
+                        <button class="btn-remove-filters" onclick="resetAllFilters()">× إزالة الكل</button>
+                    `;
+                    activeFilters.style.display = 'block';
+                } else {
+                    activeFilters.style.display = 'none';
+                }
+            }
+            
+            // تنسيق التاريخ
+            function formatDate(dateString) {
+                const date = new Date(dateString);
+                return date.toLocaleDateString('ar-EG');
+            }
+            
+            // فلترة الفعاليات
+            function filterEvents() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const category = categoryFilter.value;
+                const date = dateFilter.value;
+                
+                let visibleCount = 0;
+                
+                eventCards.forEach(card => {
+                    const title = card.querySelector('h4').textContent.toLowerCase();
+                    const meta = card.querySelector('.meta').textContent.toLowerCase();
+                    const cardCategory = card.getAttribute('data-category');
+                    const cardDate = card.getAttribute('data-date');
+                    const cardLocation = card.getAttribute('data-location');
+                    
+                    let show = true;
+                    
+                    // فلترة بالنص
+                    if (searchTerm && !title.includes(searchTerm) && !meta.includes(searchTerm) && !cardLocation.includes(searchTerm)) {
+                        show = false;
+                    }
+                    
+                    // فلترة بالتصنيف
+                    if (category && show && cardCategory !== category) {
+                        show = false;
+                    }
+                    
+                    // فلترة بالتاريخ
+                    if (date && show && cardDate !== date) {
+                        show = false;
+                    }
+                    
+                    if (show) {
+                        card.style.display = 'flex';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                // إظهار/إخفاء رسالة عدم وجود نتائج
+                if (visibleCount === 0) {
+                    noResults.style.display = 'block';
+                    eventsGrid.style.display = 'none';
+                } else {
+                    noResults.style.display = 'none';
+                    eventsGrid.style.display = 'grid';
+                }
+                
+                updateEventsCount(visibleCount);
+                updateActiveFilters();
+            }
+            
+            function resetAllFilters() {
+                searchInput.value = '';
+                categoryFilter.value = '';
+                dateFilter.value = '';
+                filterEvents();
+            }
+            
+            searchInput.addEventListener('input', filterEvents);
+            categoryFilter.addEventListener('change', filterEvents);
+            dateFilter.addEventListener('change', filterEvents);
+            resetFilters.addEventListener('click', resetAllFilters);
+            if (resetFiltersBtn) {
+                resetFiltersBtn.addEventListener('click', resetAllFilters);
+            }
+            
+            window.resetAllFilters = resetAllFilters;
+            
+            updateEventsCount(eventCards.length);
+        });
+    </script>
+
+
+    <!-- Translation JavaScript -->
+    <script>
+        // Update texts for events.html
+        window.updatePageTexts = function(lang) {
+            const texts = {
+                ar: {
+                    title: 'الفعاليات - Kaspar',
+                    home: 'الرئيسية',
+                    events: 'الفعاليات',
+                    about: 'عن الدليل',
+                    contact: 'تواصل معنا',
+                    heroTitle: 'الفعاليات',
+                    heroSubtitle: 'استكشف جميع الفعاليات القادمة في مدينتك',
+                    searchPlaceholder: 'ابحث عن فعالية...',
+                    allCategories: 'جميع التصنيفات',
+                    resetFilters: 'إعادة تعيين',
+                    activeFilters: 'الفلاتر النشطة:',
+                    removeAll: '× إزالة الكل',
+                    eventsCount: 'عرض جميع الفعاليات',
+                    noResultsTitle: 'لا توجد فعاليات تطابق معايير البحث',
+                    noResultsText: 'جرب استخدام كلمات بحث مختلفة أو إعادة تعيين الفلاتر',
+                    resetFiltersBtn: 'إعادة تعيين الفلاتر',
+                    aboutFooter: 'عن الدليل',
+                    aboutText: 'Kaspar هو دليل فعاليات محلي يجمع أهم الفعاليات في مدينتك.',
+                    contactFooter: 'تواصل معنا',
+                    emailInfo: 'البريد: info@kaspar.example',
+                    phoneInfo: 'الهاتف: 0931641171',
+                    followFooter: 'تابعنا',
+                    madeBy: 'تم صنع هذا الموقع من قبل: mohammad_286918 /—/ emad_151324 /—/ sarah_245810 /—/ hiba_allah_288225',
+                    copyright: '© 2025 Kaspar — جميع الحقوق محفوظة'
+                },
+                en: {
+                    title: 'Events - Kaspar',
+                    home: 'Home',
+                    events: 'Events',
+                    about: 'About',
+                    contact: 'Contact',
+                    heroTitle: 'Events',
+                    heroSubtitle: 'Explore all upcoming events in your city',
+                    searchPlaceholder: 'Search for an event...',
+                    allCategories: 'All Categories',
+                    resetFilters: 'Reset',
+                    activeFilters: 'Active Filters:',
+                    removeAll: '× Remove All',
+                    eventsCount: 'Show all events',
+                    noResultsTitle: 'No events match your search criteria',
+                    noResultsText: 'Try using different search terms or reset the filters',
+                    resetFiltersBtn: 'Reset Filters',
+                    aboutFooter: 'About the Guide',
+                    aboutText: 'Kaspar is a local events guide that brings together the most important events in your city.',
+                    contactFooter: 'Contact Us',
+                    emailInfo: 'Email: info@kaspar.example',
+                    phoneInfo: 'Phone: 0931641171',
+                    followFooter: 'Follow Us',
+                    madeBy: 'Made by: mohammad_286918 /—/ emad_151324 /—/ sarah_245810 /—/ hiba_allah_288225',
+                    copyright: '© 2025 Kaspar — All rights reserved'
+                }
+            };
+            
+            const currentTexts = texts[lang];
+            
+            // Update title
+            document.title = currentTexts.title;
+            
+            // Update page texts
+            const elements = {
+                'h1': currentTexts.heroTitle,
+                '.lead': currentTexts.heroSubtitle,
+                '#searchInput': currentTexts.searchPlaceholder,
+                '#categoryFilter option:first-child': currentTexts.allCategories,
+                '#resetFilters': currentTexts.resetFilters,
+                '#eventsCount': currentTexts.eventsCount,
+                // Update navbar
+                'nav a[href="index.html"]': currentTexts.home,
+                'nav a[href="events.html"]': currentTexts.events,
+                'nav a[href="about.html"]': currentTexts.about,
+                'nav a[href="contact.html"]': currentTexts.contact,
+                // Update footer
+                '.site-footer .footer-grid .col:nth-child(1) h4': currentTexts.aboutFooter,
+                '.site-footer .footer-grid .col:nth-child(1) p': currentTexts.aboutText,
+                '.site-footer .footer-grid .col:nth-child(2) h4': currentTexts.contactFooter,
+                '.site-footer .footer-grid .col:nth-child(2) p:nth-child(2)': currentTexts.emailInfo,
+                '.site-footer .footer-grid .col:nth-child(2) p:nth-child(3)': currentTexts.phoneInfo,
+                '.site-footer .footer-grid .col:nth-child(3) h4': currentTexts.followFooter,
+                '.site-footer .made-by p': currentTexts.madeBy,
+                '.site-footer .copyright': currentTexts.copyright
+            };
+            
+            Object.entries(elements).forEach(([selector, text]) => {
+                const element = document.querySelector(selector);
+                if (element) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'OPTION') {
+                        element.placeholder = text;
+                    } else {
+                        element.textContent = text;
+                    }
+                }
+            });
+        };
+    </script>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="col">
+                <h4>عن الدليل</h4>
+                <p>Kaspar هو دليل فعاليات محلي يجمع أهم الفعاليات في مدينتك.</p>
+            </div>
+
+            <div class="col">
+                <h4>تواصل معنا</h4>
+                <p>البريد: info@kaspar.example</p>
+                <p>الهاتف: 0931641171</p>
+            </div>
+
+            <div class="col">
+                <h4>تابعنا</h4>
+                <div class="socials">
+                    <a href="#"><img src="assets/img/social-fb.png" alt="fb" /></a>
+                    <a href="#"><img src="assets/img/social-ig.png" alt="ig" /></a>
+                    <a href="#"><img src="assets/img/social-tw.png" alt="tw" /></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="made-by container">
+            <p>تم صنع هذا الموقع من قبل:
+                <strong>mohammad_286918  C4</strong> /—/ <strong>emad_151324  C7</strong> /—/ <strong>sarah_245810  C3</strong> /—/ <strong>hiba_allah_288225  C5</strong>
+            </p>
+        </div>
+
+        <div class="copyright">
+            © <span id="year"></span> Kaspar — جميع الحقوق محفوظة
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
