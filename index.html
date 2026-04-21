@@ -32,15 +32,6 @@
         <button class="control-btn dark-mode-btn" id="darkModeBtn" title="الوضع المظلم">
           <img src="assets/img/day-and-night.png" alt="الوضع المظلم" style="width: 20px; height: 20px;" />
         </button>
-
-        <div class="language-buttons">
-          <button class="control-btn language-btn active" id="arabicBtn" title="العربية">
-            <img src="assets/img/Flag_of_Syria_(2025-).svg" alt="العربية" />
-          </button>
-          <button class="control-btn language-btn" id="englishBtn" title="English">
-            <img src="assets/img/UK.jpg" alt="English" />
-          </button>
-        </div>
       </div>
     </div>
   </header>
@@ -168,9 +159,8 @@
       <p><strong>يوسف عبدالله</strong> — ID: yousef_288051 — C6</p>
       <p><strong>اية الزقيمي</strong> — ID: aya_313709 — C6</p>
       <p><strong>ديانا علي</strong> — ID: diana_300311 — C6</p>
-      <p><strong> محمد الشعار</strong> — ID: mohammad_288257 — C6</p>
-      <p><strong> سعاد خليل</strong> — ID: souad_292508 — C6</p>
-
+      <p><strong>محمد الشعار</strong> — ID: mohammad_288257 — C6</p>
+      <p><strong>سعاد خليل</strong> — ID: souad_292508 — C6</p>
     </div>
   </section>
 
@@ -204,9 +194,9 @@
         <strong>yousef_288051 C6</strong> /—/
         <strong>aya_313709 C6</strong> /—/
         <strong>mohammad_288257 C6</strong> /—/
-        <strong>diana_300311 C6</strong>
+        <strong>diana_300311 C6</strong> /—/
         <strong>souad_292508 C6</strong>
-    </p>
+      </p>
     </div>
 
     <div class="copyright">
@@ -217,81 +207,5 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
-
-  <!-- Translation JavaScript -->
-  <script>
-    window.updatePageTexts = function(lang) {
-      const texts = {
-        ar: {
-          title: 'دليل فعاليات الجامعة الافتراضية',
-          home: 'الرئيسية',
-          events: 'الفعاليات',
-          about: 'عن الدليل',
-          contact: 'اتصل بنا',
-          heroTitle: 'فعاليات الجامعة هذا الأسبوع',
-          heroSubtitle: 'اكتشف أهم الندوات والورشات والأنشطة الطلابية المميزة في الجامعة الافتراضية.',
-          featuredTitle: 'فعاليات بارزة هذا الأسبوع',
-          categoriesTitle: 'تصنيفات سريعة',
-          latestEvents: 'أحدث الفعاليات',
-          aboutFooter: 'عن الدليل',
-          aboutText: 'منصة لعرض فعاليات الجامعة الافتراضية والأنشطة الطلابية بطريقة واضحة ومنظمة.',
-          contactFooter: 'تواصل معنا',
-          emailInfo: 'البريد: info@svu-events.com',
-          phoneInfo: 'الهاتف: 0997526538',
-          followFooter: 'تابعنا',
-          madeBy: 'تم صنع هذا الموقع من قبل: yousef_288051 /—/ aya_313709 /—/ diana_300311 /—/ mohammad_288257 /—/ souad_292508',
-          copyright: '© 2026 دليل فعاليات الجامعة الافتراضية — جميع الحقوق محفوظة'
-        },
-        en: {
-          title: 'Virtual University Events Guide',
-          home: 'Home',
-          events: 'Events',
-          about: 'About',
-          contact: 'Contact Us',
-          heroTitle: 'University Events This Week',
-          heroSubtitle: 'Discover the most important seminars, workshops, and student activities at the virtual university.',
-          featuredTitle: 'Featured Events This Week',
-          categoriesTitle: 'Quick Categories',
-          latestEvents: 'Latest Events',
-          aboutFooter: 'About the Guide',
-          aboutText: 'A platform for presenting virtual university events and student activities in a clear and organized way.',
-          contactFooter: 'Contact Us',
-          emailInfo: 'Email: info@svu-events.com',
-          phoneInfo: 'Phone: 0997526538',
-          followFooter: 'Follow Us',
-          madeBy: ' made by: yousef_288051 /—/ aya_313709 /—/ diana_300311 /—/ mohammad_288257 /—/ souad_292508',
-          copyright: '© 2026 Virtual University Events Guide — All rights reserved'
-        }
-      };
-
-      const currentTexts = texts[lang];
-      document.title = currentTexts.title;
-
-      const elements = {
-        'nav a[href="index.html"]': currentTexts.home,
-        'nav a[href="events.html"]': currentTexts.events,
-        'nav a[href="about.html"]': currentTexts.about,
-        'nav a[href="contact.html"]': currentTexts.contact,
-        '.hero h1': currentTexts.heroTitle,
-        '.hero .lead': currentTexts.heroSubtitle,
-        '.featured .section-title h2': currentTexts.featuredTitle,
-        '.categories h3': currentTexts.categoriesTitle,
-        '.events .section-title h2': currentTexts.latestEvents,
-        '.site-footer .footer-grid .col:nth-child(1) h4': currentTexts.aboutFooter,
-        '.site-footer .footer-grid .col:nth-child(1) p': currentTexts.aboutText,
-        '.site-footer .footer-grid .col:nth-child(2) h4': currentTexts.contactFooter,
-        '.site-footer .footer-grid .col:nth-child(2) p:nth-child(2)': currentTexts.emailInfo,
-        '.site-footer .footer-grid .col:nth-child(2) p:nth-child(3)': currentTexts.phoneInfo,
-        '.site-footer .footer-grid .col:nth-child(3) h4': currentTexts.followFooter,
-        '.site-footer .made-by p': currentTexts.madeBy,
-        '.site-footer .copyright': currentTexts.copyright
-      };
-
-      Object.entries(elements).forEach(([selector, text]) => {
-        const element = document.querySelector(selector);
-        if (element) element.textContent = text;
-      });
-    };
-  </script>
 </body>
 </html>
