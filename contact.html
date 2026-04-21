@@ -31,15 +31,6 @@
                 <button class="control-btn dark-mode-btn" id="darkModeBtn" title="الوضع المظلم">
                     <img src="assets/img/day-and-night.png" alt="الوضع المظلم" style="width: 20px; height: 20px;" />
                 </button>
-                
-                <div class="language-buttons">
-                    <button class="control-btn language-btn active" id="arabicBtn" title="العربية">
-                        <img src="assets/img/Flag_of_Syria_(2025-).svg" alt="العربية" />
-                    </button>
-                    <button class="control-btn language-btn" id="englishBtn" title="English">
-                        <img src="assets/img/UK.jpg" alt="English" />
-                    </button>
-                </div>
             </div>
         </div>
     </header>
@@ -143,7 +134,7 @@
                 <strong>yousef_288051 C6</strong> /—/
                 <strong>aya_313709 C6</strong> /—/
                 <strong>mohammad_288257 C6</strong> /—/
-                <strong>diana_300311 C6</strong>
+                <strong>diana_300311 C6</strong> /—/
                 <strong>souad_292508 C6</strong>
             </p>
         </div>
@@ -164,94 +155,6 @@
                 yearEl.textContent = new Date().getFullYear();
             }
         });
-    </script>
-
-    <!-- Translation JavaScript -->
-    <script>
-        window.updatePageTexts = function(lang) {
-            const texts = {
-                ar: {
-                    title: 'اتصل بنا - دليل فعاليات الجامعة الافتراضية',
-                    home: 'الرئيسية',
-                    events: 'الفعاليات',
-                    about: 'عن الدليل',
-                    contact: 'اتصل بنا',
-                    heroTitle: 'اتصل بنا',
-                    heroSubtitle: 'نحن هنا للإجابة عن استفساراتكم واستقبال اقتراحاتكم حول فعاليات الجامعة الافتراضية',
-                    sendMessage: 'أرسل رسالة',
-                    fullName: 'الاسم الكامل',
-                    email: 'البريد الإلكتروني',
-                    message: 'الرسالة',
-                    sendButton: 'إرسال الرسالة',
-                    contactInfo: 'معلومات التواصل',
-                    emailInfo: 'البريد الإلكتروني',
-                    phoneInfo: 'الهاتف',
-                    addressInfo: 'العنوان',
-                    aboutFooter: 'عن الدليل',
-                    aboutText: 'منصة لعرض فعاليات الجامعة الافتراضية والأنشطة الطلابية بطريقة واضحة ومنظمة.',
-                    contactFooter: 'اتصل بنا',
-                    followFooter: 'تابعنا',
-                    madeBy: 'تم صنع هذا الموقع من قبل: yousef_288051 /—/ aya_313709 /—/ diana_300311 /—/ mohammad_288257 /—/ souad_292508',
-                    copyright: '© 2026 دليل فعاليات الجامعة الافتراضية — جميع الحقوق محفوظة'
-                },
-                en: {
-                    title: 'Contact Us - Virtual University Events Guide',
-                    home: 'Home',
-                    events: 'Events',
-                    about: 'About',
-                    contact: 'Contact Us',
-                    heroTitle: 'Contact Us',
-                    heroSubtitle: 'We are here to answer your questions and receive your suggestions about virtual university events',
-                    sendMessage: 'Send a Message',
-                    fullName: 'Full Name',
-                    email: 'Email',
-                    message: 'Message',
-                    sendButton: 'Send Message',
-                    contactInfo: 'Contact Information',
-                    emailInfo: 'Email',
-                    phoneInfo: 'Phone',
-                    addressInfo: 'Address',
-                    aboutFooter: 'About the Guide',
-                    aboutText: 'A platform for presenting virtual university events and student activities in a clear and organized way.',
-                    contactFooter: 'Contact Us',
-                    followFooter: 'Follow Us',
-                    madeBy: 'made by: yousef_288051 /—/ aya_313709 /—/ diana_300311 /—/ mohammad_288257 /—/ souad_292508',
-                    copyright: '© 2026 Virtual University Events Guide — All rights reserved'
-                }
-            };
-
-            const currentTexts = texts[lang];
-            document.title = currentTexts.title;
-
-            const elements = {
-                '.hero h1': currentTexts.heroTitle,
-                '.hero .lead': currentTexts.heroSubtitle,
-                '.contact-form .section-title h2': currentTexts.sendMessage,
-                'label[for="name"]': currentTexts.fullName,
-                'label[for="email"]': currentTexts.email,
-                'label[for="message"]': currentTexts.message,
-                'button[type="submit"]': currentTexts.sendButton,
-                '.events .section-title h2': currentTexts.contactInfo,
-                '.event-card:nth-child(1) h4': currentTexts.emailInfo,
-                '.event-card:nth-child(2) h4': currentTexts.phoneInfo,
-                '.event-card:nth-child(3) h4': currentTexts.addressInfo,
-                'nav a[href="index.html"]': currentTexts.home,
-                'nav a[href="events.html"]': currentTexts.events,
-                'nav a[href="about.html"]': currentTexts.about,
-                'nav a[href="contact.html"]': currentTexts.contact,
-                '.site-footer .footer-grid .col:nth-child(1) h4': currentTexts.aboutFooter,
-                '.site-footer .footer-grid .col:nth-child(1) p': currentTexts.aboutText,
-                '.site-footer .footer-grid .col:nth-child(2) h4': currentTexts.contactFooter,
-                '.site-footer .footer-grid .col:nth-child(3) h4': currentTexts.followFooter,
-                '.site-footer .made-by p': currentTexts.madeBy,
-                '.site-footer .copyright': currentTexts.copyright
-            };
-
-            Object.entries(elements).forEach(([selector, text]) => {
-                const element = document.querySelector(selector);
-                if (element) element.textContent = text;
-            });
-        };
     </script>
 </body>
 </html>

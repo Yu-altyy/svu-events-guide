@@ -29,15 +29,6 @@
                 <button class="control-btn dark-mode-btn" id="darkModeBtn" title="الوضع المظلم">
                     <img src="assets/img/day-and-night.png" alt="الوضع المظلم" style="width: 20px; height: 20px;" />
                 </button>
-                
-                <div class="language-buttons">
-                    <button class="control-btn language-btn active" id="arabicBtn" title="العربية">
-                        <img src="assets/img/Flag_of_Syria_(2025-).svg" alt="العربية" />
-                    </button>
-                    <button class="control-btn language-btn" id="englishBtn" title="English">
-                        <img src="assets/img/UK.jpg" alt="English" />
-                    </button>
-                </div>
             </div>
         </div>
     </header>
@@ -271,7 +262,7 @@
                 <strong>yousef_288051 C6</strong> /—/
                 <strong>aya_313709 C6</strong> /—/
                 <strong>mohammad_288257 C6</strong> /—/
-                <strong>diana_300311 C6</strong>
+                <strong>diana_300311 C6</strong> /—/
                 <strong>souad_292508 C6</strong>
             </p>
         </div>
@@ -297,6 +288,11 @@
             const eventsCount = document.getElementById('eventsCount');
             const noResults = document.getElementById('noResults');
             const activeFilters = document.getElementById('activeFilters');
+            const yearEl = document.getElementById('year');
+
+            if (yearEl) {
+                yearEl.textContent = new Date().getFullYear();
+            }
 
             const eventCards = Array.from(eventsGrid.querySelectorAll('.event-card'));
 
@@ -421,79 +417,6 @@
             window.resetAllFilters = resetAllFilters;
             updateEventsCount(eventCards.length);
         });
-    </script>
-
-    <!-- Translation JavaScript -->
-    <script>
-        window.updatePageTexts = function(lang) {
-            const texts = {
-                ar: {
-                    title: 'الفعاليات - دليل فعاليات الجامعة الافتراضية',
-                    home: 'الرئيسية',
-                    events: 'الفعاليات',
-                    about: 'عن الدليل',
-                    contact: 'اتصل بنا',
-                    heroTitle: 'الفعاليات الجامعية',
-                    heroSubtitle: 'استكشف جميع الفعاليات القادمة في الجامعة الافتراضية حسب التصنيف والتاريخ والموقع',
-                    searchPlaceholder: 'ابحث عن فعالية...',
-                    allCategories: 'جميع التصنيفات',
-                    allLocations: 'جميع المواقع',
-                    resetFilters: 'إعادة تعيين',
-                    eventsCount: 'عرض جميع الفعاليات',
-                    noResultsTitle: 'لا توجد فعاليات تطابق معايير البحث',
-                    noResultsText: 'جرب استخدام كلمات مختلفة أو إعادة تعيين الفلاتر',
-                    resetFiltersBtn: 'إعادة تعيين الفلاتر'
-                },
-                en: {
-                    title: 'Events - Virtual University Events Guide',
-                    home: 'Home',
-                    events: 'Events',
-                    about: 'About',
-                    contact: 'Contact Us',
-                    heroTitle: 'University Events',
-                    heroSubtitle: 'Explore all upcoming events at the virtual university by category, date, and location',
-                    searchPlaceholder: 'Search for an event...',
-                    allCategories: 'All Categories',
-                    allLocations: 'All Locations',
-                    resetFilters: 'Reset',
-                    eventsCount: 'Show all events',
-                    noResultsTitle: 'No events match your search criteria',
-                    noResultsText: 'Try different keywords or reset the filters',
-                    resetFiltersBtn: 'Reset Filters'
-                }
-            };
-
-            const currentTexts = texts[lang];
-            document.title = currentTexts.title;
-
-            const heroTitle = document.querySelector('.hero h1');
-            const heroSubtitle = document.querySelector('.hero .lead');
-            const navHome = document.querySelector('nav a[href="index.html"]');
-            const navEvents = document.querySelector('nav a[href="events.html"]');
-            const navAbout = document.querySelector('nav a[href="about.html"]');
-            const navContact = document.querySelector('nav a[href="contact.html"]');
-            const searchInput = document.getElementById('searchInput');
-            const firstCategoryOption = document.querySelector('#categoryFilter option:first-child');
-            const firstLocationOption = document.querySelector('#locationFilter option:first-child');
-            const resetBtn = document.getElementById('resetFilters');
-            const noResultsTitle = document.querySelector('#noResults h4');
-            const noResultsText = document.querySelector('#noResults p');
-            const resetFiltersBtn = document.getElementById('resetFiltersBtn');
-
-            if (heroTitle) heroTitle.textContent = currentTexts.heroTitle;
-            if (heroSubtitle) heroSubtitle.textContent = currentTexts.heroSubtitle;
-            if (navHome) navHome.textContent = currentTexts.home;
-            if (navEvents) navEvents.textContent = currentTexts.events;
-            if (navAbout) navAbout.textContent = currentTexts.about;
-            if (navContact) navContact.textContent = currentTexts.contact;
-            if (searchInput) searchInput.placeholder = currentTexts.searchPlaceholder;
-            if (firstCategoryOption) firstCategoryOption.textContent = currentTexts.allCategories;
-            if (firstLocationOption) firstLocationOption.textContent = currentTexts.allLocations;
-            if (resetBtn) resetBtn.textContent = currentTexts.resetFilters;
-            if (noResultsTitle) noResultsTitle.textContent = currentTexts.noResultsTitle;
-            if (noResultsText) noResultsText.textContent = currentTexts.noResultsText;
-            if (resetFiltersBtn) resetFiltersBtn.textContent = currentTexts.resetFiltersBtn;
-        };
     </script>
 </body>
 </html>
